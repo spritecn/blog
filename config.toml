@@ -1,7 +1,12 @@
 baseURL = "https://blog-1254107985.cos-website.ap-shanghai.myqcloud.com"
 languageCode = "en-us"
-title = "爬不稳-Blog"
-theme = "LeaveIt"
+title = "Ja-Script"
+theme = "yinyang"
+DefaultContentLanguage = "cn"
+
+[author]
+  name = "Ja-script"
+  homepage = "https://blog-1254107985.cos-website.ap-shanghai.myqcloud.com"
 
 paginate = 12
 enableEmoji = true
@@ -39,6 +44,7 @@ preserveTaxonomyNames = true
     weight = 4
 
 [params]
+	mainSections = ["post"]
     since = 2014
     author = "Spritecn"                           # Author's name
     avatar = "/images/me/avatar.jpeg"           # Author's avatar
@@ -56,8 +62,9 @@ preserveTaxonomyNames = true
 
     license= '<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>'
 
-[params.social]
-    GitHub = "spritecn"
-    Twitter = "xxoo"
-    Email   = "xxoo"
-    Medium = "xxoo"
+[[params.socials]]
+name = "About Me"
+link = "/about/"
+[[params.socials]]
+name = "Github"
+link = "https://github.com/spritecn"
