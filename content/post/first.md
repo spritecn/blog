@@ -17,29 +17,27 @@ draft: false
 ## hugo搭建
 1. 在github上建一个项目
 2. 在hugo官网下载二进制包
-3. ``` bash
+3. 用hugo 创建一个站点，然后把二进制包(hugo.exe)放到生成好的blog目录下
+    ``` bash
     hugo new site blog #blog 为你的博客目录
     ``` 
-    生成博客，将并二进制包放到生成好的blog目录下
 4. 在模板列表里 https://github.com/spf13/hugoThemes 找个自己觉得过得去的模板放到themes目录下
 5. 配置模板，模板的README都有写怎么配，并且每个模板下都有一个example示例目录
 6. 在post目录下写篇文章，比如你现在看到的，就是我写的第一篇，写文章的时候要注意头部内容，要弄成这个格式，不然解析不了
- ``` toml
----
-title: "hugo博客搭建"
-date: 2020-05-02T23:31:42+08:00
-description: "描述"
-keywords: [ "Hugo", "keyword" ] #可用于seo
-tags: [ "tag1","tag2" ]
-categories: [ 分类1"，"分类2" ]
-weight: 40  #排序比重
-draft: false #是否为草稿
----
- ```
+    ``` markdown
+    ---
+    title: "hugo博客搭建"
+    date: 2020-05-02T23:31:42+08:00
+    description: "描述"
+    keywords: [ "Hugo", "keyword" ] #可用于seo
+    tags: [ "tag1","tag2" ]
+    categories: [ 分类1"，"分类2" ]
+    weight: 40  #排序比重
+    draft: false #是否为草稿
+    ---
+    ```
 7. cd到blog目录下 运行 hugo server 然后打开 http://localhost:1313 就可以看到效果了
 8. 在腾讯云开一个Cos开启网站服务
-
-
 
 ## 自动部署
 1. 部署逻辑:
@@ -52,7 +50,7 @@ draft: false #是否为草稿
 2. 用groovy + sparkJava + 命令操作，在vps上开一个web服务器开实现上面2-5步,见：https://github.com/spritecn/hugoBlogAutoDeploy2Cos.git
 3. 第六步更改zip自带云函数解决服务的地方为的unzipTask.js 106行,就是去掉了basenmae
     ``` javascript
-            const Key = path.join(targetPrefix, task.entry.fileNameStr).replace(/\\/g, '\/')
+        const Key = path.join(targetPrefix, task.entry.fileNameStr).replace(/\\/g, '\/')
     ```
 
 # 完工
