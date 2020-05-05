@@ -18,13 +18,13 @@ draft: false
 1. 在github上建一个项目
 2. 在hugo官网下载二进制包
 3. 用hugo 创建一个站点，然后把二进制包(hugo.exe)放到生成好的blog目录下
-    ``` bash
+    ``` python
     hugo new site blog #blog 为你的博客目录
     ``` 
 4. 在模板列表里 https://github.com/spf13/hugoThemes 找个自己觉得过得去的模板放到themes目录下
 5. 配置模板，模板的README都有写怎么配，并且每个模板下都有一个example示例目录
 6. 在post目录下写篇文章，比如你现在看到的，就是我写的第一篇，写文章的时候要注意头部内容，要弄成这个格式，不然解析不了
-    ``` markdown
+    ``` python
     ---
     title: "hugo博客搭建"
     date: 2020-05-02T23:31:42+08:00
