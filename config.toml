@@ -1,6 +1,7 @@
 baseURL = "http://blog.jascript.cn"
 languageCode = "en-us"
 title = "Ja-Script"
+uglyurls = true
 theme = "yinyang"
 DefaultContentLanguage = "cn"
 
@@ -64,7 +65,7 @@ preserveTaxonomyNames = true
 
 [[params.socials]]
 name = "About Me"
-link = "/about/"
+link = "/about/index.html"
 [[params.socials]]
 name = "Github"
 link = "https://github.com/spritecn"
