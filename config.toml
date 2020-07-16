@@ -45,6 +45,7 @@ preserveTaxonomyNames = true
     weight = 4
 
 [params]
+  favicon = "/favicon.ico"
 	mainSections = ["post"]
     since = 2014
     author = "Spritecn"                           # Author's name
