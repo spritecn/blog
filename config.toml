@@ -19,6 +19,7 @@ preserveTaxonomyNames = true
   hrefTargetBlank = true
   nofollowLinks = true
   noreferrerLinks = true
+  smartypants = false
 
 [Permalinks]
  posts = "/:year/:filename/"
