@@ -1,6 +1,5 @@
-<script type="text/javascript"
-        async
-        src="https://cdn.bootcss.com/mathjax/2.7.3/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+
+<script src="{{ .Site.Params.staticPrefix }}{{ "js/mathJax.js" | relURL }}"></script>
 MathJax.Hub.Config({
   tex2jax: {
     inlineMath: [['$','$'], ['\\(','\\)']],
