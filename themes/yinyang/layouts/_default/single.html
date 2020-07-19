@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {{ partial "head.html" . }}
+{{ partial "mathjax.html" . }}
 
 <body>
   <article class="post {{ .Site.Language.LanguageName }}" id="article">
@@ -75,7 +76,6 @@
   {{ partial "scripts.html" . }}
   {{ if .Site.Params.extraBody }}
   {{ .Site.Params.extraBody | safeHTML }}
-  {{ partial "mathjax.html" . }}
   {{ end }}
 
 </body>
