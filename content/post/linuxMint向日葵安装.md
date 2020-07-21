@@ -1,7 +1,7 @@
 ---
 title: "linuxMint向日葵安装"
 date: 2020-07-22T00:31:42+08:00
-description: "自考高数笔记"
+description: "linuxMint向日葵安装"
 tags: [ "linux","远程控制" ]
 categories: [ "linux" ]
 weight: 40
