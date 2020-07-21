@@ -1,6 +1,6 @@
 ---
 title: "linuxMint向日葵安装"
-date: 2020-07-22T00:31:42+08:00
+date: 2020-07-22T00:18:42+08:00
 description: "linuxMint向日葵安装"
 tags: [ "linux","远程控制" ]
 categories: [ "linux" ]
@@ -41,7 +41,7 @@ if [ $os_name == 'ubuntu' ]; then
 elif [ $os_name == 'deepin' ]; then
 ```
 - 然后重新配置
-```
+```sh
 sudo dpkg-reconfigure sunloginclient 
 ```
 
