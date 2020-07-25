@@ -29,14 +29,14 @@ sudo cp /usr/local/share/applications/deepin.com.qq.im.light.desktop /usr/share/
 ```
 
 # 安装wx
-```
+```sh
 wget https://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.wechat/deepin.com.wechat_2.6.2.31deepin0_i386.deb
 sudo dpkg -i deepin.com.wechat_2.6.2.31deepin0_i386.deb
 ```
 安装完测试没问题
 
 # 安装dingding(这个版本好像和deepin-Wine没啥关系)
-```
+```sh
 sudo apt install libappindicator1 libdbusmenu-gtk4
 wget https://mirrors.aliyun.com/deepin/pool/non-free/d/dingtalk/dingtalk_2.0.13-145_amd64.deb
 sudo dpkg -i dingtalk_2.0.13-145_amd64.deb 
@@ -47,7 +47,7 @@ https://github.com/nashaofu/dingtalk/releases/download/v2.1.5/dingtalk-2.1.5-lat
 ```
 
 # foxmail等
-```
+```sh
 wget https://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.foxmail/deepin.com.foxmail_7.2deepin3_i386.deb
 ```
 更多软件可以在 https://mirrors.aliyun.com/deepin/pool/non-free/d/ 找到

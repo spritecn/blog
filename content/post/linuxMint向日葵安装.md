@@ -1,4 +1,5 @@
---- title: "linuxMint向日葵安装"
+--- 
+title: "linuxMint向日葵安装"
 date: 2020-07-22T00:18:42+08:00
 description: "linuxMint向日葵安装"
 tags: [ "linux","远程控制" ]
