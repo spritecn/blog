@@ -10,6 +10,7 @@ draft: false
 
 # linuxMint向日葵安装记
 - 官方下载地址 https://sunlogin.oray.com/download/
+- 还可以下载一个9系列的版本
 - 直接安装会报少 libwebkitgtk 3.0-0 依赖
 - 依赖安装(抄自知乎，但知乎写的有点问题,libicu版本下载不到改了一下版本号)
 ```sh
