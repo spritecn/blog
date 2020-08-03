@@ -5,7 +5,7 @@ description: "linuxMint安装 IDEA 19"
 tags: [ "idea","linuxMint" ]
 categories: [ "java" ]
 weight: 40
-draft: true
+draft: false
 ---
 
 # 安装idea
@@ -18,8 +18,8 @@ tar -zxvf ideaIU-2019.3.5.tar.gz
 # 调整
 ```sh
 cp jetbrains-agent.jar  idea-IU-193.7288.26/bin/
-touch idea-IU-193.7288.26/bin/important.txt
 ```
+把jetbrains-agent.jar包里META-INF下的import.txt也要放在jetbrains-agent.jar相同位置
 然后打开 /idea-IU-193.7288.26/bin/idea64.vmoptions
 添加下面内容
 ```sh
@@ -35,8 +35,8 @@ link:https://www.jiweichengzhu.com/article/2940ed65c94f4671ae3f3aa72e168673
 Name=IDEA
 Comment=Code Editing. Redefined.
 GenericName=Text Editor
-Exec=/home/spx/soft/idea-IU-193.7288.26/bin/idea.sh %F
-Icon=/home/spx/soft/idea-IU-193.7288.26/bin/idea.svg
+Exec=/home/xxxxxx/soft/idea-IU-193.7288.26/bin/idea.sh %F
+Icon=/home/xxxxxx/soft/idea-IU-193.7288.26/bin/idea.svg
 Type=Application
 StartupNotify=false
 StartupWMClass=Code
@@ -47,5 +47,6 @@ Keywords=;
 
 X-Desktop-File-Install-Version=0.24
 ```
+
 
 

@@ -10,7 +10,6 @@ draft: false
 
 # linuxMint向日葵安装记
 - 官方下载地址 https://sunlogin.oray.com/download/
-- 还可以下载一个9系列的版本
 - 直接安装会报少 libwebkitgtk 3.0-0 依赖
 - 依赖安装(抄自知乎，但知乎写的有点问题,libicu版本下载不到改了一下版本号)
 ```sh
@@ -46,4 +45,8 @@ elif [ $os_name == 'deepin' ]; then
 sudo dpkg-reconfigure sunloginclient 
 ```
 
-## 现在可以打开客户端了，结束 
+## 现在可以打开客户端了，结束
+
+## 后记
+- 发现了 9.x版本的客户端,只有被控端功能,但大多数情况下够用了
+- 地址: https://mirrors.aliyun.com/deepin/pool/non-free/s/sunloginclient/sunloginclient_10.0.0-23489_amd64.deb 

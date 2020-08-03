@@ -53,7 +53,10 @@ wget https://mirrors.aliyun.com/deepin/pool/non-free/d/deepin.com.foxmail/deepin
 更多软件可以在 https://mirrors.aliyun.com/deepin/pool/non-free/d/ 找到
 
 # 遗留问题
-- wx无法发送图片，听说安装这个包：libjpeg62:i386可以解决，但这个包和向日葵冲突，工作更依赖向日葵，wx只用来吹水，还是算了
+- wx无法发送图片:
+  ```sh
+   wget -qO- https://deepin-wine.i-m.dev/setup.sh | sudo sh
+  ```
 
 # 感谢
 - https://github.com/wszqkzqk/deepin-wine-ubuntu
