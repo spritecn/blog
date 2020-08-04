@@ -1,7 +1,7 @@
 ---
 title: "linuxMint安装 IDEA2019.03.5"
 date: 2020-07-25T21:31:42+08:00
-description: "linuxMint安装 IDEA 19"
+description: ""
 tags: [ "idea","linuxMint" ]
 categories: [ "java" ]
 weight: 40
