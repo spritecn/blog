@@ -5,7 +5,7 @@ description: ""
 tags: [ "Mint","blog" ]
 categories: [ "Linux" ]
 weight: 40
-draft: true
+draft: false
 ---
 
 - redis-desktop-manager新版本收费了，但是发现snap商店版本不收费
