@@ -9,10 +9,8 @@ draft: false
 ---
 
 
-# mysql
-## 建表
+# sql优化
 
-## sql优化
 
 
 # spring事务相关
