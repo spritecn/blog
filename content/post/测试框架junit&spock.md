@@ -1,11 +1,11 @@
 ---
 title: "测试框架junit&spock"
-date: 2020-07-08T01:31:42+08:00
+date: 2020-11-05T01:31:42+08:00
 description: ""
 tags: [ "junit","java" ]
 categories: [ "shitLife" ]
 weight: 40
-draft: true
+draft: false
 ---
 
 # 测试框架junit&spock
