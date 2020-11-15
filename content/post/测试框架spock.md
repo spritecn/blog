@@ -1,5 +1,5 @@
 ---
-title: "测试框架junit&spock"
+title: "测试框架spock"
 date: 2020-11-05T01:31:42+08:00
 description: ""
 tags: [ "junit","java" ]
@@ -58,8 +58,8 @@ class BaseTestSpock extends Specification{
 ``` java
  java.lang.Exception: Method $spock_feature_1_0 should have no parameters
  ```
-## 编写测试类
--  spock定义了8个语义块
+## spock相关定义：
+-  语义块
    -  given,setup:初始消息创建(setup is an alias of thg given);
    -  when:触发测试动作
    -  then:验证测试结果
@@ -67,11 +67,27 @@ class BaseTestSpock extends Specification{
    -  where:参数流测试
    -  cleanup:类似finally,清理资源
    -  and:续上一个语句块，（出现在given后面就是given块，出现在then后面就是then块，个人理解只是为了分割逻辑让代码清淅存在的)
-- given,when,then 测试流
+-  方法：
+   -  setup(),在每一个测试方法执行前执行
+   -  setupSpec()，在测试方法执行前执行，只执行一次
+   -  cleanup(), 在每一个测试方法执行后执行
+   -  cleanupSpec(),所有测试方法执行结束后执行
+-  语法糖方法：
+   -  old(),取when或expect之前的数据，主要用于测试前后对比
+   -  expect()，用于标记验证，无实际效果，主要为了可读性，写在then块内
+   -  that(),同上，写在and块或expct块里
+-  注解：
+   -  @Subject(Class) 用于标记正在测试的类，也可以直接写在类初始化语句上，仅影响可读性
+   -  @Narrative("""balabalabala""") Longer description of test
+   -  @Title("test")，标题
+   ----
+   -  @Shared 标记一个对象是共享的，只初始化一次
+- given,when,then 测试流，适用于单个条件测试
   - given:给写测试数据
   - when:执行测试
   - then:校验结果
-- 
+- given,expect,where 测试流，适用于多个条件测试
+  - 
 
 
 
