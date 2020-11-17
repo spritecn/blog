@@ -62,8 +62,9 @@ draft: false
 ### MOCK/Stub/Spy
 - MOCK/Stub/Spy 这部分单独写一个文档
 
-## 测试方法编写
-- 测试类需要继承Specification类
+## 测试编写
+- **测试类需要继承Specification类**
+- **测试类为groovy类，而非java类**
 - given,when,then 测试流，when和then需要搭配使用,
   - given:给写测试数据
   - when:执行待测试的函数
@@ -104,6 +105,7 @@ draft: false
 ## springboot集成
 
 ### maven引入
+springBoot
 ``` xml
 <dependency>
         <groupId>org.springframework.boot</groupId>
@@ -119,7 +121,7 @@ draft: false
         <scope>test</scope>
     </dependency>
 ```
-*下面这些不需要写，写上可能因为版本问题报错*
+*非springBoot,sprigBoot一般不需要独立引入，避免报错
 ``` xml
 <dependency>
         <groupId>org.spockframework</groupId>
