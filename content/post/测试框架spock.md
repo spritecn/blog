@@ -178,7 +178,7 @@ springBoot
             resultList.isEmpty()
       }
    }
-```
+   ```
 
 
 ## tips
@@ -192,6 +192,7 @@ springBoot
    ```groovy
    list.stream().filter({x->!x.getDisabled()}).count() > 1
    ```
+- end
 
 
 
