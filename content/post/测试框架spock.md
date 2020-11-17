@@ -136,60 +136,60 @@ draft: false
 ```
 ### 基础类
 - springboot集成测试基础类，实际写的时候继承这个类
-``` java
-@WebAppConfiguration
-@ContextConfiguration(classes = Application.class)
-@SpringBootTest
-@Slf4j
-class BaseTestSpock extends Specification{}
-```
+   ``` java
+   @WebAppConfiguration
+   @ContextConfiguration(classes = Application.class)
+   @SpringBootTest
+   @Slf4j
+   class BaseTestSpock extends Specification{}
+   ```
 - 注意：**不要在基础接口里写@RunWith(SpringRunner.class)**,因为会覆盖spock的runwith导致spock无法正常运行
 - 如果是单独测一部分功能，比如仅测一个service,可以在启动类里，仅扫描dao层包，然后@import(Serivce.class),然的就可以autowaried这个类了
 如仅启动dao层的启动类
-```java
-@SpringBootApplication(scanBasePackages = {"com.*.*.dao.*"})
-//去除swagger
-@EnableAutoConfiguration(exclude = SwaggerAutoConfiguration.class)
-@MapperScan("com.*.*billing*.dao.mapper")
-public class ApplicationTest{
-    public static void main(String[] args) {
-        SpringApplication.run(ApplicationTest.class, args);
-    }
-}
-```
-测试单个service
-```groovy
-@SpringBootTest
-@ContextConfiguration(classes = ApplicationTest.class)
-//导入单个service
-@Import(MealServiceImpl.class)
-class MealDaoTest extends Specification {
-   @Autowired
-   MealServiceImpl mealService
-   def "test listMeal"() {
-      given:
-         ListMealDTO listMealDTO = new ListMealDTO()
-         listMealDTO.setUuid("3423fsfrsfsd")
-      when:
-         def resultList = mealService.listMeal(listMealDTO)
-      then:
-         resultList.isEmpty()
+   ```java
+   @SpringBootApplication(scanBasePackages = {"com.*.*.dao.*"})
+   //去除swagger
+   @EnableAutoConfiguration(exclude = SwaggerAutoConfiguration.class)
+   @MapperScan("com.*.*billing*.dao.mapper")
+   public class ApplicationTest{
+      public static void main(String[] args) {
+         SpringApplication.run(ApplicationTest.class, args);
+      }
    }
-}
+   ```
+- 测试单个service
+   ```groovy
+   @SpringBootTest
+   @ContextConfiguration(classes = ApplicationTest.class)
+   //导入单个service
+   @Import(MealServiceImpl.class)
+   class MealDaoTest extends Specification {
+      @Autowired
+      MealServiceImpl mealService
+      def "test listMeal"() {
+         given:
+            ListMealDTO listMealDTO = new ListMealDTO()
+            listMealDTO.setUuid("3423fsfrsfsd")
+         when:
+            def resultList = mealService.listMeal(listMealDTO)
+         then:
+            resultList.isEmpty()
+      }
+   }
 ```
 
 
 ## tips
 - idea设置groovy的Label indent缩进改为4(默认0),看起来更舒服
 - groovy3.0 以下版本不支持 java8的 lambda语法，需要转为Closure 方法,不然后报错
-下面java
-```java
-list.stream().filter(x->!x.getDisabled()).count() > 1;
-```
-需要转为
-```groovy
-list.stream().filter({x->!x.getDisabled()}).count() > 1
-```
+   下面java
+   ```java
+   list.stream().filter(x->!x.getDisabled()).count() > 1;
+   ```
+   需要转为
+   ```groovy
+   list.stream().filter({x->!x.getDisabled()}).count() > 1
+   ```
 
 
 
