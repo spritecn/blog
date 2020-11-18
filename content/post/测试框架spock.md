@@ -183,12 +183,11 @@ springBoot
 
 ## tips
 - idea设置groovy的Label indent缩进改为4(默认0),看起来更舒服
-- groovy3.0 以下版本不支持 java8的 lambda语法，需要转为Closure 方法,不然后报错
-   下面java
+- groovy3.0 以下版本不支持 java8的 lambda语法，需要转为Closure 方法,不然后报错,如下面java：
    ```java
    list.stream().filter(x->!x.getDisabled()).count() > 1;
    ```
-   需要转为
+   需要转为groovy的闭包写法
    ```groovy
    list.stream().filter({x->!x.getDisabled()}).count() > 1
    ```
