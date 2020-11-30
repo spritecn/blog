@@ -105,37 +105,37 @@ draft: false
 ## springboot集成
 
 ### maven引入
-springBoot
-``` xml
-<dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-test</artifactId>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spock-spring</artifactId>
-        <!-- 版本不建议写，由springboot指定，不然会报莫名的错
-        <version>1.0-groovy-2.4</version>
-         -->
-        <scope>test</scope>
-    </dependency>
-```
-*非springBoot,sprigBoot一般不需要独立引入，避免报错
-``` xml
-<dependency>
-        <groupId>org.spockframework</groupId>
-        <artifactId>spock-core</artifactId>
-        <version>1.3-groovy-2.5</version>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-        <groupId>org.codehaus.groovy</groupId>
-        <artifactId>groovy-all</artifactId>
-        <version>2.5.13</version>
-        <scope>test</scope>
-</dependency>
-```
+- springBoot
+   ``` xml
+   <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-test</artifactId>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spock-spring</artifactId>
+         <!-- 版本不建议写，由springboot指定，不然会报莫名的错
+         <version>1.0-groovy-2.4</version>
+            -->
+         <scope>test</scope>
+      </dependency>
+   ```
+- *非springBoot,sprigBoot一般不需要独立引入，避免报错
+   ``` xml
+   <dependency>
+         <groupId>org.spockframework</groupId>
+         <artifactId>spock-core</artifactId>
+         <version>1.3-groovy-2.5</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <groupId>org.codehaus.groovy</groupId>
+         <artifactId>groovy-all</artifactId>
+         <version>2.5.13</version>
+         <scope>test</scope>
+   </dependency>
+   ```
 ### 基础类
 - springboot集成测试基础类，实际写的时候继承这个类
    ``` java
