@@ -1,6 +1,6 @@
 ---
 title: "java泛型如何new一个T()"
-date: 2020-07-08T01:31:42+08:00
+date: 2020-11-30T21:31:42+08:00
 description: ""
 tags: [ "java","blog" ]
 categories: [ "java" ]
@@ -22,7 +22,7 @@ class TestClass<T>{
 想当然的写，然后就报错了，不得不说，java的泛型支持，着实...
 ## 分析
 - t = new T();idea 提示 Cannot resolve symbol 'T'，泛型的这个T，在运行时是会被擦掉的，java不知道new一个怎么样的class出来
-- 百度t = new T(),第一个是https://blog.csdn.net/qq_35584878/article/details/101275076
+- 百度t = new T(),第一个是 https://blog.csdn.net/qq_35584878/article/details/101275076
     我帖一下这个网站的代码
     ```java
     ParameterizedType pt = (ParameterizedType) this.getClass().getGenericSuperclass();
@@ -30,7 +30,7 @@ class TestClass<T>{
     // 通过反射创建model的实例
     T t = clazz.newInstance();
     ```
-    用上面代码替换T = new T()这个测试是报错的，clazz是null不能给null创建一个实例，这此没头没尾的文章很是误导读者，getGenericSuperclass是返回父类的泛型类，参考https://www.cnblogs.com/maokun/p/6773203.html，仅在父类对象T为非泛型时可以正常返回父类泛型参数的真实对象
+    用上面代码替换T = new T()这个测试是报错的，clazz是null不能给null创建一个实例，这此没头没尾的文章很是误导读者，getGenericSuperclass是返回父类的泛型类，参考[https://www.cnblogs.com/maokun/p/6773203.html]，仅在父类对象T为非泛型时可以正常返回父类泛型参数的真实对象
 ## 解决
 - 给get方法 传入class,让jvm知道new一个什么对象
     ```java
@@ -56,7 +56,7 @@ class TestClass<T>{
   ```java
   class TestClass<T>  implements Supplier<T>
   ```
-  参考<on java 8>:https://lingcoder.github.io/OnJava8/#/book/20-Generics?id=%e8%a1%a5%e5%81%bf%e6%93%a6%e9%99%a4
+  参考<<on java 8>>:[https://lingcoder.github.io/OnJava8/#/book/20-Generics?id=%e8%a1%a5%e5%81%bf%e6%93%a6%e9%99%a4]
 
 ## by a way
-- <<on java 8>> 还是有蛮多干货，考虑细看一下
+- <<on java 8>> 还是有蛮多干货，有必要细看一下
